@@ -1234,6 +1234,7 @@ func (g *Generator) generateImports() {
 		packageName := g.GoPackageName(importPath)
 		if _, ok := g.usedPackages[importPath]; !ok {
 			packageName = "_"
+			continue
 		}
 		imports[importPath] = packageName
 	}
